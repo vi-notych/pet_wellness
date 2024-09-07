@@ -227,6 +227,27 @@
   }
 }
 
+.services {
+  max-width: 1360px;
+  margin: 0 auto;
+  padding: 0 10px 10px;
+
+  &__inner {
+    border-radius: 12px;
+    background-color: $white;
+    padding: 40px;
+  }
+
+  &__img {
+    height: 500px;
+    border-radius: 12px;
+    overflow: hidden;
+    margin: -40px -40px 0;
+    position: relative;
+
+    img {
+      position: absolute;
+      top: -30px;
     }
   }
 }
