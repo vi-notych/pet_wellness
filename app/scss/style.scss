@@ -75,10 +75,10 @@
     margin-left: 80px;
     display: flex;
     flex-direction: column;
+  }
 
-    a {
-      color: $black;
-    }
+  a {
+    color: $black;
   }
 
   &__adress,
@@ -261,9 +261,12 @@
     justify-content: space-between;
     border: 1px solid #d2d3d6;
     border-radius: 5px;
-    margin-bottom: 10px;
     align-items: center;
     padding: 40px;
+
+    &:not(:last-child) {
+      margin-bottom: 10px;
+    }
   }
 
   &__subtitle {
@@ -286,7 +289,7 @@
   &__inner {
     border-radius: 12px;
     background-color: $white;
-    padding: 40px;
+    padding: 40px 30px 40px 40px;
   }
 
   &__title {
@@ -297,7 +300,8 @@
   &__items {
     display: flex;
     flex-wrap: wrap;
-    gap: 10px;
+    row-gap: 10px;
+    column-gap: 10px;
   }
 
   &__item {
@@ -327,6 +331,102 @@
   }
 }
 
+
+
+.footer {
+  max-width: 1360px;
+  margin: 0 auto;
+  padding: 0 10px 10px;
+
+  &__top {
+    padding: 40px;
+    border-radius: 12px;
+    background-color: $white;
+    display: flex;
+  }
+
+  &__contacts {
+    max-width: 320px;
+    width: 100%;
+    margin-right: auto;
+  }
+
+  &__title {
+    font-size: 48px;
+    margin-bottom: 20px;
+  }
+
+  &__text {
+    margin-bottom: 53px;
+  }
+
+  a {
+    color: $black;
+  }
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__form {
+    border: 1px solid #d2d3d6;
+    border-radius: 5px;
+    padding: 40px;
+    position: relative;
+
+    span {
+      width: 270px;
+    }
+  }
+
+  &__input-box {
+    display: flex;
+    margin-bottom: 32px;
+  }
+
+  &__name,
+  &__phone {
+    width: 344px;
+    height: 63px;
+    border: none;
+    border-bottom: 1px solid $black;
+  }
+
+  &__name {
+    margin-right: 10px;
+  }
+
+  &__checkbox-box {
+    display: flex;
+
+    span {
+      display: block;
+      font-size: 12px;
+      width: 270px;
+      margin-left: 5px;
+    }
+  }
+
+  &__checkbox {
+    width: 20px;
+    height: 20px;
+  }
+
+  &__button {
+    width: 344px;
+    margin-top: auto;
+    position: absolute;
+    bottom: 40px;
+    right: 40px;
+  }
+
+  &__bottom {
+    height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 }
 
 
