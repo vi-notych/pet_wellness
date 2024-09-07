@@ -48,7 +48,6 @@
 
 .hero {
   max-width: 1360px;
-  height: 550px;
   margin: 0 auto;
   padding: 0 10px 10px;
 
@@ -114,13 +113,12 @@
   }
 
   &__title {
-    @extend %PTSerif;
     margin-top: auto;
     margin-bottom: 40px;
     font-size: 64px;
   }
+}
 
-  &__btn {
     height: 55px;
     width: 170px;
     text-transform: uppercase;
@@ -131,7 +129,6 @@
     cursor: pointer;
     transition: background-color 0.3s;
 
-    &:hover {
       background-color: $green-hover;
     }
   }
