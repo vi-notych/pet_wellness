@@ -12,19 +12,19 @@
 
   <header class="header">
     <div class="header__inner">
-      <a class="header__logo" href="#">
+      <a class="header__logo" href="/">
         <img src="images/logo.svg" alt="logo-svg">
       </a>
       <nav class="header__nav">
         <ul class="header__list">
           <li class="header__item">
-            <a class="header__link" href="index.html">home</a>
+            <a class="header__link" href="/">home</a>
           </li>
           <li class="header__item">
             <a class="header__link" href="about-us.html">about us</a>
           </li>
           <li class="header__item">
-            <a class="header__link" href="services.html">servises</a>
+            <a class="header__link" href="services.html">services</a>
           </li>
           <li class="header__item">
             <a class="header__link" href="contacts.html">contacts</a>
@@ -61,7 +61,7 @@
         <h2 class="about__title title">
           Medical Services <br> with Love and Care
         </h2>
-        <div class="about__text">
+        <div class="about__text text">
           <p>
             We are pleased to welcome you to our cozy corner of caring for your beloved pet. Our team is dedicated to
             the ideal of
@@ -85,28 +85,28 @@
           <h4 class="features__subtitle title">
             Friendly Atmosphere
           </h4>
-          <p class="features__text">
+          <p class="features__text text">
             We have created a friendly and cozy atmosphere where you and your pet will feel at home.
-          </p>
-        </div>
-        <div class="features__item">
-          <h4 class="features__subtitle title">
-            Modern Equipment
-          </h4>
-          <p class="features__text">
-            We have equipped our clinic with modern equipment to provide accurate diagnosis and effective treatment for
-            your pet.
           </p>
         </div>
         <div class="features__item">
           <h4 class="features__subtitle title">
             Professionalism <br> and Experience
           </h4>
-          <p class="features__text">
+          <p class="features__text text">
             Our veterinarians are highly qualified specialists with years of experience ready to assist your pet in
             various situations.
           </p>
           <button class="features__button btn">book a visit</button>
+        </div>
+        <div class="features__item">
+          <h4 class="features__subtitle title">
+            Modern Equipment
+          </h4>
+          <p class="features__text text">
+            We have equipped our clinic with modern equipment to provide accurate diagnosis and effective treatment for
+            your pet.
+          </p>
         </div>
       </div>
     </section>
@@ -123,7 +123,7 @@
           <h4 class="services__subtitle title">
             Dentistry
           </h4>
-          <p class="services__text">
+          <p class="services__text text">
             Professional teeth cleaning, treatment of teeth and gums, tooth extraction.
           </p>
           <button class="services__button btn">
@@ -134,7 +134,7 @@
           <h4 class="services__subtitle title">
             Diseases and Injuries
           </h4>
-          <p class="services__text">
+          <p class="services__text text">
             Diagnosis, treatment of internal and external diseases, surgical interventions.
           </p>
           <button class="services__button btn">
@@ -145,7 +145,7 @@
           <h4 class="services__subtitle title">
             Preventive Care
           </h4>
-          <p class="services__text">
+          <p class="services__text text">
             Vaccination, general medical examination, nutrition, and care consultations.
           </p>
           <button class="services__button btn">
@@ -163,7 +163,7 @@
         <div class="reviews__items">
           <div class="reviews__item">
             <img src="images/reviews/1.jpg" alt="photo-reviews">
-            <p class="reviews__text">
+            <p class="reviews__text text">
               The staff is always friendly, the facility is spotless, and most importantly, my pets receive top-notch
               medical attention every visit.
             </p>
@@ -173,7 +173,7 @@
           </div>
           <div class="reviews__item">
             <img src="images/reviews/2.jpg" alt="photo-reviews">
-            <p class="reviews__text">
+            <p class="reviews__text text">
               Their personalised approach to care sets them apart, and I couldn't be happier with the service we've
               received.
             </p>
@@ -183,7 +183,7 @@
           </div>
           <div class="reviews__item">
             <img src="images/reviews/3.jpg" alt="photo-reviews">
-            <p class="reviews__text">
+            <p class="reviews__text text">
               The team here is not only highly skilled but also genuinely compassionate towards animals and their
               owners.
             </p>
@@ -193,7 +193,7 @@
           </div>
           <div class="reviews__item">
             <img src="images/reviews/4.jpg" alt="photo-reviews">
-            <p class="reviews__text">
+            <p class="reviews__text text">
               The team here is not only highly skilled but also genuinely compassionate towards animals and their
               owners.
             </p>
@@ -213,7 +213,7 @@
         <h2 class="footer__title title">
           Contacts
         </h2>
-        <p class="footer__text">
+        <p class="footer__text text">
           Submit the form below and our consultant will contact you within 15 minutes
         </p>
         <div class="footer__wrapper">
@@ -226,18 +226,18 @@
         </div>
       </div>
       <form class="footer__form">
-        <div class="footer__input-box">
-          <input class="footer__name" placeholder="Name" type="text">
-          <input class="footer__phone" placeholder="Phone" type="text">
-        </div>
-        <div class="footer__checkbox-box">
-          <input class="footer__checkbox" type="checkbox">
-          <span>By submitting this form you will be indicating your consent to our privacy policy.</span>
+        <input class="footer__input text" placeholder="Name" type="text">
+        <input class="footer__input text" placeholder="Phone" type="text">
+        <div class="checkbox">
+          <input class="checkbox__input" type="checkbox" id="checkbox1">
+          <label class="checkbox__label text" for="checkbox1">By submitting this form you will be indicating your
+            consent
+            to our privacy policy.</label>
         </div>
         <button class="footer__button btn">book a visit</button>
       </form>
     </div>
-    <div class="footer__bottom">
+    <div class="footer__bottom text">
       © 2019-2024 Pet Wellnes. All rights reserved
     </div>
   </footer>
