@@ -37,18 +37,18 @@
   <main class="main">
 
     <section class="hero">
-      <div class="hero__inner hero__inner-about">
-        <div class="hero__img hero__img-about">
+      <div class="hero__inner hero__inner--reversed">
+        <div class="hero__img ">
           <img src="images/hero2-img.jpg" alt="photo-hero">
         </div>
-        <div class="hero__items hero__items-about">
+        <div class="hero__items">
           <a class="hero__adress" href="#">
             Pet Wellness, 22 Pink Street
           </a>
           <a class="hero__phone" href="tel:+8018026405">
             + 80 180 26 405
           </a>
-          <h1 class="hero__title hero__title-about title ">
+          <h1 class="hero__title title ">
             Our <br> Growth Story
           </h1>
           <p class="hero__text text">
@@ -60,71 +60,72 @@
       </div>
     </section>
 
-    <section class="features">
-      <div class="features__inner features__inner-about">
-        <div class="features__item features__item-about">
-          <h4 class="features__subtitle features__subtitle-about title">
-            Foundation of the Clinic
-          </h4>
-          <p class="features__text">
-            In 2015, the clinic was founded with the aim of providing high-quality medical care for pets. We set high
-            service standards and aimed for ellence in everything we do.
-          </p>
-        </div>
-        <div class="features__item features__item-about">
-          <h4 class="features__subtitle features__subtitle-about title">
-            Attraction <br> of Experienced Specialists
-          </h4>
-          <p class="features__text">
-            Our team consists of highly qualified specialists, each of whom is an expert in their field. Our doctors
-            constantly
-            update their knowledge and skills.
-          </p>
-        </div>
-        <div class="features__item features__item-about">
-          <h4 class="features__subtitle features__subtitle-about title">
-            Expansion of Services
-          </h4>
-          <p class="features__text">
-            Over time, we expanded our range of services, including prevention, treatment, dentistry, and much more.
-            This allowed us to provide a full range of medical care for animals.
-          </p>
-        </div>
-        <div class="features__item features__item-about">
-          <h4 class="features__subtitle features__subtitle-about title">
-            Modern Equipment
-          </h4>
-          <p class="features__text">
-            We have invested in modern equipment and technologies to provide accurate diagnosis and effective treatment
-            for our
-            patients. This allows us to achieve the best results and provide a high level of care.
-          </p>
-        </div>
-        <div class="features__item features__item-about">
-          <p class="features__text">
-            Thanks to our efforts and dedication, our clinic has gained the trust of many clients and has become a
-            leader in the
-            field of veterinary medicine in our region.
-          </p>
-          <h2 class="features__subtitle features__subtitle-about title">
-            Our success is measured by the gratitude and smiles of our satisfied clients and their healthy pets.
-          </h2>
-        </div>
+    <section class="evidence">
+      <div class="evidence__item">
+        <h4 class="evidence__subtitle title">
+          Foundation of the Clinic
+        </h4>
+        <p class="evidence__text text">
+          In 2015, the clinic was founded with the aim of providing high-quality medical care for pets. We set high
+          service standards and aimed for ellence in everything we do.
+        </p>
+      </div>
+      <div class="evidence__item">
+        <h4 class="evidence__subtitle title">
+          Expansion of Services
+        </h4>
+        <p class="evidence__text text">
+          Over time, we expanded our range of services, including prevention, treatment, dentistry, and much more.
+          This allowed us to provide a full range of medical care for animals.
+        </p>
+      </div>
+      <div class="evidence__item">
+        <h4 class="evidence__subtitle title">
+          Attraction <br> of Experienced Specialists
+        </h4>
+        <p class="evidence__text text">
+          Our team consists of highly qualified specialists, each of whom is an expert in their field. Our doctors
+          constantly
+          update their knowledge and skills.
+        </p>
+      </div>
+      <div class="evidence__item">
+        <h4 class="evidence__subtitle title">
+          Modern Equipment
+        </h4>
+        <p class="evidence__text text">
+          We have invested in modern equipment and technologies to provide accurate diagnosis and effective treatment
+          for our
+          patients. This allows us to achieve the best results and provide a high level of care.
+        </p>
+      </div>
+    </section>
+
+    <section class="mission">
+      <div class="mission__item">
+        <p class="mission__text text">
+          Thanks to our efforts and dedication, our clinic has gained the trust of many clients and has become a
+          leader in the
+          field of veterinary medicine in our region.
+        </p>
+        <h2 class="mission__title title">
+          Our success is measured by the gratitude and smiles of our satisfied clients and their healthy pets.
+        </h2>
       </div>
     </section>
 
   </main>
 
-  <footer class="footer">
-    <div class="footer__top">
-      <div class="footer__contacts">
-        <h2 class="footer__title title">
+  <section class="contacts">
+    <div class="contacts__inner">
+      <div class="contacts__info">
+        <h2 class="contacts__title title">
           Contacts
         </h2>
-        <p class="footer__text">
+        <p class="contacts__text text">
           Submit the form below and our consultant will contact you within 15 minutes
         </p>
-        <div class="footer__wrapper">
+        <div class="contacts__wrapper">
           <a class="hero__adress" href="#">
             Pet Wellness, 22 <br> Pink Street
           </a>
@@ -133,22 +134,23 @@
           </a>
         </div>
       </div>
-      <form class="footer__form">
-        <div class="footer__input-box">
-          <input class="footer__name" placeholder="Name" type="text">
-          <input class="footer__phone" placeholder="Phone" type="text">
+      <form class="contacts__form">
+        <input class="contacts__input text" placeholder="Name" type="text">
+        <input class="contacts__input text" placeholder="Phone" type="text">
+        <div class="contacts__checkbox">
+          <input type="checkbox" id="checkbox1">
+          <label class="text" for="checkbox1">
+            By submitting this form you will be indicating your consent to our privacy policy.
+          </label>
         </div>
-        <div class="footer__checkbox-box">
-          <input class="footer__checkbox" type="checkbox">
-          <span>By submitting this form you will be indicating your consent to our privacy policy.</span>
-        </div>
-        <button class="footer__button btn">book a visit</button>
+        <button class="contacts__button btn">book a visit</button>
       </form>
     </div>
-    <div class="footer__bottom text">
+    <div class="contacts__bottom text">
       © 2019-2024 Pet Wellnes. All rights reserved
     </div>
-  </footer>
+  </section>
+
   <script src="js/main.min.js"></script>
 </body>
 
