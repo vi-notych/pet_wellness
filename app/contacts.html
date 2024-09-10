@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pet Wellness</title>
+  <link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body>
+
+  <header class="header">
+    <div class="header__inner">
+      <a class="header__logo" href="/">
+        <img src="images/logo.svg" alt="logo-svg">
+      </a>
+      <nav class="header__nav">
+        <ul class="header__list">
+          <li class="header__item">
+            <a class="header__link" href="/">home</a>
+          </li>
+          <li class="header__item">
+            <a class="header__link" href="about-us.html">about us</a>
+          </li>
+          <li class="header__item">
+            <a class="header__link" href="prices.html">prices</a>
+          </li>
+          <li class="header__item">
+            <a class="header__link" href="contacts.html">contacts</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="main">
+
+    <section class="contacts">
+      <div class="contacts__inner">
+        <div class="contacts__info">
+          <h2 class="contacts__title title">
+            Contacts
+          </h2>
+          <p class="contacts__text text">
+            Submit the form below and our consultant will contact you within 15 minutes
+          </p>
+          <div class="contacts__wrapper">
+            <a class="hero__adress" href="#">
+              Pet Wellness, 22 <br> Pink Street
+            </a>
+            <a class="hero__phone" href="tel:+8018026405">
+              + 80 180 26 405
+            </a>
+          </div>
+        </div>
+        <form class="contacts__form">
+          <input class="contacts__input text" placeholder="Name" type="text">
+          <input class="contacts__input text" placeholder="Phone" type="text">
+          <div class="contacts__checkbox">
+            <input type="checkbox" id="checkbox1">
+            <label class="text" for="checkbox1">
+              By submitting this form you will be indicating your consent to our privacy policy.
+            </label>
+          </div>
+          <button class="contacts__button btn">book a visit</button>
+        </form>
+      </div>
+    </section>
+    <section class="map">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3113.4597244026113!2d-9.146368824026005!3d38.70725297176533!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd19352efae3f381%3A0x98d83ac3037bab1e!2sPink%20Street!5e0!3m2!1sru!2spl!4v1725956198513!5m2!1sru!2spl"
+        max-width="1340" width="100%" height="412" style="border:none;border-radius:12px;" allowfullscreen=""
+        loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </section>
+
+  </main>
+
+  <section class="copyright text">
+    © 2019-2024 Pet Wellnes. All rights reserved
+  </section>
+
+  <script src="js/main.min.js"></script>
+</body>
+
+</html>
