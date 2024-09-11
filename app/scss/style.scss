@@ -51,6 +51,14 @@
   margin: 0 auto;
   padding: 0 10px 10px;
 
+  &__inner {
+    border-radius: 12px;
+    background-color: $white;
+    padding: 40px;
+    display: flex;
+    gap: 80px;
+  }
+
   &__img {
     max-width: 570px;
     width: 100%;
@@ -62,26 +70,10 @@
     }
   }
 
-  &__inner {
-    border-radius: 12px;
-    background-color: $white;
-    padding: 40px;
-    display: flex;
-  }
-
   &__items {
-    margin-left: 80px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-  }
-
-  &__text {
-    max-width: 470px;
-  }
-
-  a {
-    color: $black;
   }
 
   &__adress,
@@ -109,46 +101,37 @@
     }
   }
 
-  &__phone {
-    &::before {
-      content: url(../images/icon/phone.svg);
-    }
+  &__phone::before {
+    content: url(../images/icon/phone.svg);
   }
 
   &__title {
     margin-top: auto;
-    margin-bottom: 40px;
     font-size: 64px;
+  }
+
+  &__button {
+    margin-top: 40px;
+  }
+
+  &__text {
+    margin-top: 30px;
+    max-width: 470px;
   }
 
   &__inner--reversed {
     flex-direction: row-reverse;
     justify-content: space-between;
-
-    .hero__inner {
-      flex-direction: row-reverse;
-      justify-content: space-between;
-    }
-
-    .hero__img {
-      max-width: 590px;
-      width: 100%;
-    }
-
-    .hero__items {
-      margin-left: 0;
-      margin-right: 80px;
-    }
-
-    .hero__title {
-      margin-bottom: 30px;
-    }
   }
 
-  .hero__img--services {
+  &__img--about {
+    max-width: 590px;
+  }
+
+  &__img--services {
     max-width: 790px;
-    width: 100%;
   }
+
 }
 
 .about {
@@ -184,11 +167,10 @@
     margin-bottom: 40px;
 
     p {
-      max-width: 380px;
       width: 100%;
 
-      &:last-child {
-        margin-left: 280px;
+      &:first-child {
+        margin-right: 50px;
       }
     }
   }
@@ -227,13 +209,13 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+  }
 
-    &:nth-child(2) {
-      grid-row: span 2;
+  &__item--big {
+    grid-row: span 2;
 
-      .features__subtitle {
-        margin-bottom: 45px;
-      }
+    .features__subtitle {
+      margin-bottom: 45px;
     }
   }
 
@@ -385,10 +367,6 @@
     margin-bottom: 53px;
   }
 
-  a {
-    color: $black;
-  }
-
   &__wrapper {
     display: flex;
     justify-content: space-between;
@@ -423,6 +401,11 @@
     &::placeholder {
       color: $black
     }
+
+    .input {
+      padding-block: 0;
+      padding-inline: 0;
+    }
   }
 
   &__button {
@@ -432,7 +415,7 @@
 
   &__checkbox {
     display: flex;
-    max-width: 295px;
+    max-width: 290px;
     width: 100%;
 
     input {
@@ -442,12 +425,13 @@
       width: 100%;
       height: 20px;
       border: 1px solid $black;
+      margin: 0;
 
       &::after {
         content: url(../images/icon/angle-checkbox.svg);
         position: absolute;
-        top: -2px;
-        left: 4px;
+        top: -1px;
+        left: 3px;
         transition: opacity 0.3s;
         opacity: 0;
       }
@@ -460,7 +444,7 @@
     label {
       display: block;
       font-size: 12px;
-      margin-left: 5px;
+      margin-left: 10px;
     }
   }
 }
@@ -571,24 +555,29 @@
     padding: 40px;
     display: flex;
     justify-content: space-between;
-    height: 400px;
+    min-height: 400px;
     margin-bottom: 10px;
-
-    span {
-      display: block;
-      @extend %PTSerif;
-      font-size: 32px;
-      line-height: 1.2;
-      margin: 5px 0 30px;
-    }
   }
 
   &__list {
     width: 300px;
   }
 
+  &__price {
+    margin-bottom: 30px;
+
+    p {
+      @extend %PTSerif;
+      font-size: 32px;
+      line-height: 1.2;
+      margin-top: 5px;
+    }
+  }
+
 
   &__info {
+    max-width: 790px;
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -599,7 +588,7 @@
 
   &__text {
     margin: 25px 0 auto 0;
-    max-width: 775px;
+    max-width: 720px;
     width: 100%;
   }
 
@@ -608,8 +597,8 @@
   }
 
   &__button {
-    max-width: 790px;
     width: 100%;
+    margin-top: 10px;
   }
 }
 
@@ -619,6 +608,7 @@
   padding: 0 10px 10px;
 }
 
+.i4ewOd-pzNkMb-haAclf {}
 
 
 
