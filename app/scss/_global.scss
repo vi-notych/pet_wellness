@@ -33,7 +33,11 @@ body {
   border-radius: 27px;
   border-color: transparent;
   cursor: pointer;
-  transition: background-color 0.3s;
+  transition: background-color 0.3s, transform 0.3s;
+
+  &:active {
+    transform: scale(0.95);
+  }
 
   &:hover {
     background-color: $green-hover;

@@ -6,7 +6,6 @@
 
 .header {
   max-width: 1360px;
-  //width: 100%;
   padding: 10px;
   margin: 0 auto;
 
@@ -36,6 +35,7 @@
       bottom: -18px;
       height: 2px;
       width: 100%;
+      border-radius: 1px;
       background-color: rgba(0, 0, 0, 0);
       transition: background-color 0.3s;
     }
@@ -74,6 +74,7 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    width: 100%;
   }
 
   &__adress,
@@ -89,7 +90,7 @@
     }
 
     &:hover {
-      color: $green;
+      color: $green-hover;
     }
   }
 
@@ -159,19 +160,16 @@
   &__title {
     font-size: 48px;
     margin-bottom: auto;
-    margin-left: calc(52%);
+    margin-left: calc(50% + 25px);
   }
 
   &__text {
     display: flex;
     margin-bottom: 40px;
+    gap: 50px;
 
     p {
       width: 100%;
-
-      &:first-child {
-        margin-right: 50px;
-      }
     }
   }
 
@@ -195,7 +193,7 @@
   padding: 0 10px 10px;
 
   &__inner {
-    height: 510px;
+    min-height: 510px;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr);
@@ -343,7 +341,7 @@
 .contacts {
   max-width: 1360px;
   margin: 0 auto;
-  padding: 0 10px 10px;
+  padding: 0 10px;
 
   &__inner {
     padding: 40px;
@@ -370,6 +368,10 @@
   &__wrapper {
     display: flex;
     justify-content: space-between;
+
+    .hero__adress {
+      margin-bottom: 0;
+    }
   }
 
   &__form {
@@ -426,6 +428,7 @@
       height: 20px;
       border: 1px solid $black;
       margin: 0;
+      cursor: pointer;
 
       &::after {
         content: url(../images/icon/angle-checkbox.svg);
@@ -556,7 +559,10 @@
     display: flex;
     justify-content: space-between;
     min-height: 400px;
-    margin-bottom: 10px;
+
+    &:not(:last-child) {
+      margin-bottom: 10px;
+    }
   }
 
   &__list {
@@ -573,7 +579,6 @@
       margin-top: 5px;
     }
   }
-
 
   &__info {
     max-width: 790px;
@@ -604,11 +609,12 @@
 
 .map {
   max-width: 1360px;
+  height: 412px;
   margin: 0 auto;
-  padding: 0 10px 10px;
+  padding: 10px 10px 0;
 }
 
-.i4ewOd-pzNkMb-haAclf {}
+
 
 
 
