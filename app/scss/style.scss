@@ -18,6 +18,11 @@
     border-radius: 12px;
   }
 
+  &__nav-btn,
+  &__btn {
+    display: none;
+  }
+
   &__list {
     display: flex;
     gap: 50px;
@@ -74,7 +79,7 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    width: 100%;
+    min-width: 275px;
   }
 
   &__adress,
@@ -145,12 +150,17 @@
     position: relative;
     border-radius: 12px;
     background-color: $white;
-    padding: 40px 40px;
+    padding: 40px;
     display: flex;
     flex-direction: column;
 
     &::before {
-      content: url(../images/icon/services.svg);
+      content: '';
+      background-image: url(../images/icon/services.svg);
+      background-size: cover;
+      background-repeat: no-repeat;
+      height: 80px;
+      width: 115px;
       position: absolute;
       top: 40px;
       left: 40px;
@@ -169,6 +179,7 @@
     gap: 50px;
 
     p {
+      padding-right: 14%;
       width: 100%;
     }
   }
@@ -181,6 +192,9 @@
     position: relative;
 
     img {
+      width: 100%;
+      object-fit: cover;
+      object-position: center;
       position: absolute;
       top: -90px;
     }
@@ -255,6 +269,8 @@
     position: relative;
 
     img {
+      object-fit: cover;
+      object-position: center;
       position: absolute;
       top: -30px;
     }
@@ -280,15 +296,13 @@
 
   &__subtitle {
     font-size: 32px;
+    min-width: 300px;
   }
 
   &__text {
     max-width: 330px;
-    margin-left: auto;
-    margin-right: 210px;
+    margin: 0 20px;
   }
-
-
 }
 
 .reviews {
@@ -371,6 +385,7 @@
 
     .hero__adress {
       margin-bottom: 0;
+      max-width: 150px;
     }
   }
 
@@ -613,6 +628,16 @@
   margin: 0 auto;
   padding: 10px 10px 0;
 }
+
+
+
+
+
+
+
+
+
+
 
 
 
