@@ -318,6 +318,33 @@
       max-width: 100%;
     }
   }
+
+  .prices {
+    &__item {
+      flex-direction: column;
+      position: relative;
+    }
+
+    .prices__list {
+      order: 1;
+      margin-bottom: 85px;
+    }
+
+    &__info {
+      margin-left: 0;
+    }
+
+    &__text {
+      margin: 20px 0;
+    }
+
+    &__button {
+      position: absolute;
+      bottom: 40px;
+      left: 40px;
+      width: calc(100% - 80px);
+    }
+  }
 }
 
 @media (max-width:480px) {
@@ -364,6 +391,13 @@
     &__inner {
       padding: 0;
       gap: 0;
+    }
+
+    &__inner--about,
+    &__inner--services {
+      .hero__items {
+        padding-bottom: 20px;
+      }
     }
 
     &__items {
@@ -575,4 +609,21 @@
       }
     }
   }
+
+  .prices {
+    &__item {
+      padding: 20px;
+    }
+
+    &__price {
+      margin-bottom: 20px;
+    }
+
+    &__button {
+      bottom: 20px;
+      left: 20px;
+      width: calc(100% - 40px);
+    }
+  }
+
 }

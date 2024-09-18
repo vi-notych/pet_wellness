@@ -235,6 +235,9 @@ body {
 .hero__inner--services .hero__items {
   max-width: 390px;
 }
+.hero__inner--services .hero__title {
+  max-width: 340px;
+}
 
 .about {
   max-width: 1360px;
@@ -912,6 +915,26 @@ body {
   .contacts__input {
     max-width: 100%;
   }
+  .prices__item {
+    flex-direction: column;
+    position: relative;
+  }
+  .prices .prices__list {
+    order: 1;
+    margin-bottom: 85px;
+  }
+  .prices__info {
+    margin-left: 0;
+  }
+  .prices__text {
+    margin: 20px 0;
+  }
+  .prices__button {
+    position: absolute;
+    bottom: 40px;
+    left: 40px;
+    width: calc(100% - 80px);
+  }
 }
 @media (max-width: 480px) {
   .title-h1 {
@@ -938,6 +961,9 @@ body {
   .hero__inner {
     padding: 0;
     gap: 0;
+  }
+  .hero__inner--about .hero__items, .hero__inner--services .hero__items {
+    padding-bottom: 20px;
   }
   .hero__items {
     padding: 20px 20px 30px;
@@ -1091,5 +1117,16 @@ body {
     left: 20px;
     height: 60px;
     width: 60px;
+  }
+  .prices__item {
+    padding: 20px;
+  }
+  .prices__price {
+    margin-bottom: 20px;
+  }
+  .prices__button {
+    bottom: 20px;
+    left: 20px;
+    width: calc(100% - 40px);
   }
 }/*# sourceMappingURL=style.css.map */
