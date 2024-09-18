@@ -107,7 +107,7 @@ body {
   color: #fff;
   background-color: #00850B;
   border-radius: 27px;
-  border-color: transparent;
+  border: none;
   cursor: pointer;
   transition: background-color 0.3s, transform 0.3s;
 }
@@ -184,7 +184,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  min-width: 275px;
+  width: 100%;
 }
 .hero__adress, .hero__phone {
   padding-left: 25px;
@@ -223,11 +223,17 @@ body {
   flex-direction: row-reverse;
   justify-content: space-between;
 }
-.hero__img--about {
+.hero__inner--about .hero__img {
   max-width: 590px;
 }
-.hero__img--services {
+.hero__inner--about .hero__items {
+  max-width: 590px;
+}
+.hero__inner--services .hero__img {
   max-width: 790px;
+}
+.hero__inner--services .hero__items {
+  max-width: 390px;
 }
 
 .about {
@@ -426,11 +432,12 @@ body {
   border-radius: 12px;
   background-color: #fff;
   display: flex;
+  justify-content: space-between;
 }
 .contacts__info {
   max-width: 320px;
   width: 100%;
-  margin-right: auto;
+  margin-right: 10px;
 }
 .contacts__title {
   font-size: 48px;
@@ -470,6 +477,10 @@ body {
   color: #202330;
   outline-style: none;
   border-bottom: 1px solid #202330;
+  transition: border-color 0.3s;
+}
+.contacts__input:hover {
+  border-color: #00850B;
 }
 .contacts__input::-moz-placeholder {
   color: #202330;
@@ -477,9 +488,8 @@ body {
 .contacts__input::placeholder {
   color: #202330;
 }
-.contacts__input .input {
-  padding-block: 0;
-  padding-inline: 0;
+.contacts__input input {
+  padding: 0;
 }
 .contacts__button {
   max-width: 344px;
@@ -501,6 +511,9 @@ body {
   border: 1px solid #202330;
   margin: 0;
   cursor: pointer;
+}
+.contacts__checkbox input:hover {
+  border-color: #00850B;
 }
 .contacts__checkbox input::after {
   content: url(../images/icon/angle-checkbox.svg);
@@ -661,13 +674,10 @@ body {
   .hero__inner {
     gap: 40px;
   }
-  .hero__title {
+  .title-h1 {
     font-size: 48px;
   }
-  .about__title,
-  .services__title,
-  .reviews__title,
-  .contacts__title {
+  .title-h2 {
     font-size: 42px;
   }
   .services__img img {
@@ -691,13 +701,10 @@ body {
   }
 }
 @media (max-width: 960px) {
-  .hero__title {
+  .title-h1 {
     font-size: 46px;
   }
-  .about__title,
-  .services__title,
-  .reviews__title,
-  .contacts__title {
+  .title-h2 {
     font-size: 36px;
   }
   .about__inner {
@@ -719,7 +726,7 @@ body {
     display: flex;
     flex-direction: column;
   }
-  .features__subtitle {
+  .features .features__subtitle {
     margin-bottom: 30px;
   }
   .features__button {
@@ -747,17 +754,20 @@ body {
   }
 }
 @media (max-width: 768px) {
-  .about__title,
-  .services__title,
-  .reviews__title,
-  .contacts__title {
-    font-size: 32px;
+  .title-h1 {
+    font-size: 42px;
+  }
+  .title-h2 {
+    font-size: 34px;
+  }
+  .header__inner {
+    padding: 20px 40px;
   }
   .header__nav {
     order: 1;
   }
   .header__nav ul {
-    padding: 60px 0 260px;
+    padding: 60px 40px 40px;
     margin: 0 10px;
   }
   .header__list {
@@ -768,8 +778,10 @@ body {
     left: 0;
     flex-direction: column;
     align-items: center;
+    justify-content: flex-start;
     background-color: white;
     border-radius: 12px;
+    pointer-events: none;
     z-index: 5;
     opacity: 0;
   }
@@ -786,12 +798,11 @@ body {
   .header__nav-btn {
     display: flex;
     width: 24px;
-    height: 10px;
+    height: 12px;
     border: none;
     background-color: transparent;
     position: relative;
     cursor: pointer;
-    transition: background-color 0.3s;
   }
   .header__nav-btn:hover::after, .header__nav-btn:hover::before {
     background-color: #016509;
@@ -803,36 +814,42 @@ body {
     height: 2px;
     border-radius: 1px;
     background-color: #00850B;
-    transition: background-color 0.3s;
   }
   .header__nav-btn::before {
     top: 0;
+    transition: background-color 0.3s, transform 0.3s, top 0.3s 0.15s;
   }
   .header__nav-btn::after {
     bottom: 0;
+    transition: background-color 0.3s, transform 0.3s, bottom 0.3s 0.15s;
   }
   .header__nav--active .header__list {
     opacity: 1;
   }
   .header__nav--active .header__nav-btn::before {
     transform: rotate(45deg);
-    top: 4px;
+    top: 5px;
+    transition: background-color 0.3s, transform 0.3s 0.15s, top 0.3s;
   }
   .header__nav--active .header__nav-btn::after {
-    transform: rotate(135deg);
-    bottom: 4px;
+    transform: rotate(-45deg);
+    bottom: 5px;
+    transition: background-color 0.3s, transform 0.3s 0.15s, bottom 0.3s;
+  }
+  .no-scroll {
+    overflow-y: hidden;
   }
   .header--active {
     height: 100vh;
   }
   .header--active .header__btn {
     display: block;
-    position: fixed;
-    bottom: 40px;
-    right: 0;
-    left: 0;
-    margin: 0 40px;
+    margin-top: auto;
+    width: 100%;
     z-index: 10;
+  }
+  .header--active .header__list {
+    pointer-events: auto;
   }
   .hero__inner {
     flex-direction: column;
@@ -854,20 +871,26 @@ body {
   }
 }
 @media (max-width: 480px) {
-  .about__title,
-  .services__title,
-  .reviews__title,
-  .contacts__title {
+  .title-h1 {
+    font-size: 38px;
+  }
+  .title-h2 {
+    font-size: 32px;
+  }
+  .title-h3 {
     font-size: 28px;
   }
   .btn {
     padding: 10px;
   }
   .header__inner {
-    padding: 24px 20px;
+    padding: 22px 20px;
   }
   .header__logo img {
     max-width: 90%;
+  }
+  .header__nav ul {
+    padding: 60px 20px 20px;
   }
   .hero__inner {
     padding: 0;
@@ -920,14 +943,14 @@ body {
   .services__img {
     margin: -20px -20px 0;
   }
+  .services__title {
+    margin: 30px 0;
+  }
   .services__item {
     border: none;
     padding: 20px 0;
     border-top: 1px solid #d2d3d6;
     border-radius: 0;
-  }
-  .services__subtitle {
-    font-size: 24px;
   }
   .services__text {
     margin: 20px 0 30px;
@@ -947,6 +970,9 @@ body {
     padding: 20px 0;
     border-top: 1px solid #d2d3d6;
     border-radius: 0;
+  }
+  .reviews__item:last-child {
+    padding-bottom: 0;
   }
   .reviews__item img {
     height: 60px;
@@ -976,6 +1002,7 @@ body {
   }
   .contacts__wrapper .hero__adress {
     margin-bottom: 20px;
+    max-width: 100%;
   }
   .contacts__wrapper .hero__phone {
     margin-bottom: 30px;
