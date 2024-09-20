@@ -43,3 +43,7 @@ body {
     background-color: $green-hover;
   }
 }
+
+.no-scroll {
+  overflow-y: hidden;
+}

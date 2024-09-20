@@ -118,6 +118,10 @@ body {
   background-color: #016509;
 }
 
+.no-scroll {
+  overflow-y: hidden;
+}
+
 .header {
   max-width: 1360px;
   padding: 10px;
@@ -156,6 +160,35 @@ body {
 }
 .header__link:hover::before {
   background-color: #00850B;
+}
+.header__nav--active .header__list {
+  opacity: 1;
+  transition: 0.3s;
+}
+.header__nav--active .header__nav-btn::before {
+  transform: rotate(45deg);
+  top: 5px;
+  transition: background-color 0.3s, transform 0.3s 0.15s, top 0.3s;
+}
+.header__nav--active .header__nav-btn::after {
+  transform: rotate(-45deg);
+  bottom: 5px;
+  transition: background-color 0.3s, transform 0.3s 0.15s, bottom 0.3s;
+}
+
+.header--active {
+  height: 100vh;
+  overflow-y: auto;
+}
+.header--active .header__btn {
+  display: block;
+  margin-top: auto;
+  width: 100%;
+  z-index: 10;
+}
+.header--active .header__list {
+  pointer-events: auto;
+  overflow-y: auto;
 }
 
 .hero {
@@ -451,9 +484,9 @@ body {
 }
 .contacts__wrapper {
   display: flex;
-  justify-content: space-between;
 }
 .contacts__wrapper .hero__adress {
+  margin-right: 20px;
   margin-bottom: 0;
   max-width: 150px;
 }
@@ -467,9 +500,6 @@ body {
   border-radius: 5px;
   padding: 40px;
   position: relative;
-}
-.contacts__form span {
-  width: 270px;
 }
 .contacts__input {
   display: block;
@@ -590,7 +620,7 @@ body {
   content: "";
   background-image: url(../images/icon/features/4.svg);
   height: 100px;
-  width: 100px;
+  width: 104px;
 }
 .evidence__text {
   max-width: 510px;
@@ -632,8 +662,7 @@ body {
 }
 .mission__text {
   max-width: 585px;
-  width: 100%;
-  margin-left: auto;
+  margin-left: calc(50% + 45px);
 }
 
 .prices {
@@ -713,7 +742,15 @@ body {
     flex-direction: column;
   }
   .contacts__info {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    max-height: 200px;
+    min-width: 50%;
     margin-bottom: 30px;
+  }
+  .contacts__text {
+    margin-bottom: 20px;
   }
   .contacts__form {
     max-width: 100%;
@@ -721,6 +758,10 @@ body {
   }
   .contacts__input {
     max-width: 45%;
+  }
+  .contacts__wrapper {
+    margin-top: 72px;
+    margin-left: 40px;
   }
 }
 @media (max-width: 960px) {
@@ -795,6 +836,9 @@ body {
     order: 1;
     margin-left: 0;
   }
+  .contacts__button {
+    max-width: 270px;
+  }
 }
 @media (max-width: 768px) {
   .title-h1 {
@@ -815,9 +859,9 @@ body {
   }
   .header__list {
     position: absolute;
-    top: 98px;
+    top: 90px;
     width: calc(100% - 20px);
-    height: calc(100vh - 108px);
+    height: calc(100vh - 100px);
     left: 0;
     flex-direction: column;
     align-items: center;
@@ -866,34 +910,6 @@ body {
     bottom: 0;
     transition: background-color 0.3s, transform 0.3s, bottom 0.3s 0.15s;
   }
-  .header__nav--active .header__list {
-    opacity: 1;
-  }
-  .header__nav--active .header__nav-btn::before {
-    transform: rotate(45deg);
-    top: 5px;
-    transition: background-color 0.3s, transform 0.3s 0.15s, top 0.3s;
-  }
-  .header__nav--active .header__nav-btn::after {
-    transform: rotate(-45deg);
-    bottom: 5px;
-    transition: background-color 0.3s, transform 0.3s 0.15s, bottom 0.3s;
-  }
-  .no-scroll {
-    overflow-y: hidden;
-  }
-  .header--active {
-    height: 100vh;
-  }
-  .header--active .header__btn {
-    display: block;
-    margin-top: auto;
-    width: 100%;
-    z-index: 10;
-  }
-  .header--active .header__list {
-    pointer-events: auto;
-  }
   .hero__inner {
     flex-direction: column;
   }
@@ -911,6 +927,16 @@ body {
   }
   .hero img {
     height: 100%;
+  }
+  .contacts__info {
+    display: block;
+  }
+  .contacts__wrapper {
+    margin-left: 0;
+    margin-top: 0;
+  }
+  .contacts__text {
+    margin-bottom: 52px;
   }
   .contacts__input {
     max-width: 100%;
@@ -1061,17 +1087,18 @@ body {
   .contacts__info {
     display: flex;
     flex-direction: column;
+    flex-wrap: nowrap;
     margin-right: 0;
     margin-bottom: 0;
     padding: 20px 20px 0 20px;
     max-width: 100%;
+    max-height: 100%;
   }
   .contacts__wrapper {
     flex-direction: column;
   }
   .contacts__wrapper .hero__adress {
     margin-bottom: 20px;
-    max-width: 100%;
   }
   .contacts__wrapper .hero__phone {
     margin-bottom: 30px;
@@ -1084,7 +1111,7 @@ body {
   .contacts__form {
     border: none;
     border-radius: 12px;
-    padding: 70px 20px 20px;
+    padding: 70px 20px 30px;
     margin-top: -70px;
     border-top: 1px solid #d2d3d6;
   }
@@ -1100,7 +1127,7 @@ body {
   }
   .evidence__item:nth-child(1)::before, .evidence__item:nth-child(4)::before {
     height: 60px;
-    width: 60px;
+    width: 62px;
   }
   .evidence__item:nth-child(2)::before, .evidence__item:nth-child(3)::before {
     height: 60px;

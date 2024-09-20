@@ -1,8 +1,6 @@
 @media (max-width:1200px) {
-  .hero {
-    &__inner {
-      gap: 40px;
-    }
+  .hero__inner {
+    gap: 40px;
   }
 
   .title-h1 {
@@ -13,18 +11,14 @@
     font-size: 42px;
   }
 
-  .services {
-    &__img {
-      img {
-        top: 0;
-      }
+  .services__img {
+    img {
+      top: 0;
     }
   }
 
-  .reviews {
-    &__item {
-      padding: 30px 20px 30px 130px;
-    }
+  .reviews__item {
+    padding: 30px 20px 30px 130px;
   }
 
   .contacts {
@@ -33,8 +27,18 @@
     }
 
     &__info {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      max-height: 200px;
+      min-width: 50%;
       margin-bottom: 30px;
     }
+
+    &__text {
+      margin-bottom: 20px;
+    }
+
 
     &__form {
       max-width: 100%;
@@ -43,6 +47,11 @@
 
     &__input {
       max-width: 45%;
+    }
+
+    &__wrapper {
+      margin-top: 72px;
+      margin-left: 40px;
     }
   }
 
@@ -152,6 +161,10 @@
       margin-left: 0;
     }
   }
+
+  .contacts__button {
+    max-width: 270px;
+  }
 }
 
 @media (max-width:768px) {
@@ -179,9 +192,9 @@
 
     &__list {
       position: absolute;
-      top: 98px;
+      top: 90px;
       width: calc(100% - 20px);
-      height: calc(100vh - 108px);
+      height: calc(100vh - 100px);
       left: 0;
       flex-direction: column;
       align-items: center;
@@ -244,46 +257,6 @@
         transition: background-color 0.3s, transform 0.3s, bottom 0.3s 0.15s;
       }
     }
-
-    &__nav--active {
-      .header__list {
-        opacity: 1;
-
-      }
-
-      .header__nav-btn::before {
-        transform: rotate(45deg);
-        top: 5px;
-        transition: background-color 0.3s, transform 0.3s 0.15s, top 0.3s;
-
-      }
-
-      .header__nav-btn::after {
-        transform: rotate(-45deg);
-        bottom: 5px;
-        transition: background-color 0.3s, transform 0.3s 0.15s, bottom 0.3s;
-
-      }
-    }
-  }
-
-  .no-scroll {
-    overflow-y: hidden;
-  }
-
-  .header--active {
-    height: 100vh;
-
-    .header__btn {
-      display: block;
-      margin-top: auto;
-      width: 100%;
-      z-index: 10;
-    }
-
-    .header__list {
-      pointer-events: auto;
-    }
   }
 
   .hero {
@@ -314,6 +287,19 @@
   }
 
   .contacts {
+    &__info {
+      display: block;
+    }
+
+    &__wrapper {
+      margin-left: 0;
+      margin-top: 0;
+    }
+
+    &__text {
+      margin-bottom: 52px;
+    }
+
     &__input {
       max-width: 100%;
     }
@@ -374,16 +360,12 @@
       padding: 22px 20px;
     }
 
-    &__logo {
-      img {
-        max-width: 90%;
-      }
+    &__logo img {
+      max-width: 90%;
     }
 
-    &__nav {
-      ul {
-        padding: 60px 20px 20px;
-      }
+    &__nav ul {
+      padding: 60px 20px 20px;
     }
   }
 
@@ -532,10 +514,12 @@
     &__info {
       display: flex;
       flex-direction: column;
+      flex-wrap: nowrap;
       margin-right: 0;
       margin-bottom: 0;
       padding: 20px 20px 0 20px;
       max-width: 100%;
+      max-height: 100%;
     }
 
     &__wrapper {
@@ -543,7 +527,6 @@
 
       .hero__adress {
         margin-bottom: 20px;
-        max-width: 100%;
       }
 
       .hero__phone {
@@ -560,7 +543,7 @@
     &__form {
       border: none;
       border-radius: 12px;
-      padding: 70px 20px 20px;
+      padding: 70px 20px 30px;
       margin-top: -70px;
       border-top: 1px solid #d2d3d6;
     }
@@ -582,7 +565,7 @@
       &:nth-child(1)::before,
       &:nth-child(4)::before {
         height: 60px;
-        width: 60px;
+        width: 62px;
       }
 
       &:nth-child(2)::before,
@@ -625,5 +608,4 @@
       width: calc(100% - 40px);
     }
   }
-
 }
