@@ -126,6 +126,7 @@ body {
   max-width: 1360px;
   padding: 10px;
   margin: 0 auto;
+  overflow-y: auto;
 }
 .header__inner {
   display: flex;
@@ -163,7 +164,6 @@ body {
 }
 .header__nav--active .header__list {
   opacity: 1;
-  transition: 0.3s;
 }
 .header__nav--active .header__nav-btn::before {
   transform: rotate(45deg);
@@ -175,16 +175,13 @@ body {
   bottom: 5px;
   transition: background-color 0.3s, transform 0.3s 0.15s, bottom 0.3s;
 }
-
 .header--active {
   height: 100vh;
-  overflow-y: auto;
 }
 .header--active .header__btn {
   display: block;
   margin-top: auto;
   width: 100%;
-  z-index: 10;
 }
 .header--active .header__list {
   pointer-events: auto;
@@ -859,7 +856,7 @@ body {
   }
   .header__list {
     position: absolute;
-    top: 90px;
+    top: 91px;
     width: calc(100% - 20px);
     height: calc(100vh - 100px);
     left: 0;
@@ -869,8 +866,8 @@ body {
     background-color: white;
     border-radius: 12px;
     pointer-events: none;
-    z-index: 5;
     opacity: 0;
+    transition: 0.3s;
   }
   .header__list__item:not(:last-child) {
     margin-right: 0px;
@@ -1111,7 +1108,7 @@ body {
   .contacts__form {
     border: none;
     border-radius: 12px;
-    padding: 70px 20px 30px;
+    padding: 70px 20px 50px;
     margin-top: -70px;
     border-top: 1px solid #d2d3d6;
   }
@@ -1155,5 +1152,9 @@ body {
     bottom: 20px;
     left: 20px;
     width: calc(100% - 40px);
+  }
+  .map {
+    margin-top: -30px;
+    border-radius: 12px;
   }
 }/*# sourceMappingURL=style.css.map */

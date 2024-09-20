@@ -8,6 +8,7 @@
   max-width: 1360px;
   padding: 10px;
   margin: 0 auto;
+  overflow-y: auto;
 
   &__inner {
     display: flex;
@@ -53,7 +54,6 @@
   &__nav--active {
     .header__list {
       opacity: 1;
-      transition: 0.3s;
     }
 
     .header__nav-btn::before {
@@ -70,24 +70,23 @@
 
     }
   }
-}
 
-.header--active {
-  height: 100vh;
-  overflow-y: auto;
+  &--active {
+    height: 100vh;
 
-  .header__btn {
-    display: block;
-    margin-top: auto;
-    width: 100%;
-    z-index: 10;
-  }
+    .header__btn {
+      display: block;
+      margin-top: auto;
+      width: 100%;
+    }
 
-  .header__list {
-    pointer-events: auto;
-    overflow-y: auto;
+    .header__list {
+      pointer-events: auto;
+      overflow-y: auto;
+    }
   }
 }
+
 
 .hero {
   max-width: 1360px;
@@ -705,8 +704,6 @@
   margin: 0 auto;
   padding: 10px 10px 0;
 }
-
-
 
 
 
