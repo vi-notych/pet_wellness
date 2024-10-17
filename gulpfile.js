@@ -25,10 +25,6 @@ function styles() {
       overrideBrowserslist: ['last 10 version'],
       grid: true
     }))
-    // .pipe(scss({
-    //   outputStyle: 'compressed',
-    //   sourceMap: false // Отключаем создание карты исходников
-    // }))
     .pipe(concat('style.min.css'))
     .pipe(scss({ outputStyle: 'compressed' }))
     .pipe(dest('app/css'))

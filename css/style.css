@@ -317,10 +317,7 @@ body {
 }
 .about__img img {
   width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: center;
-     object-position: center;
+  height: auto;
   position: absolute;
   top: -90px;
 }
@@ -384,12 +381,9 @@ body {
   position: relative;
 }
 .services__img img {
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: center;
-     object-position: center;
+  width: 100%;
+  height: auto;
   position: absolute;
-  top: -30px;
 }
 .services__title {
   font-size: 48px;
@@ -717,7 +711,6 @@ body {
   height: 412px;
   margin: 0 auto;
   padding: 10px 10px 0;
-  margin: 0px 0px 0xp 0px;
 }
 
 @media (max-width: 1200px) {
@@ -1158,4 +1151,4 @@ body {
     margin-top: -30px;
     border-radius: 12px;
   }
-}/*# sourceMappingURL=style.css.map */
+}
